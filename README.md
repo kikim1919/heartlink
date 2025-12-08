@@ -30,7 +30,7 @@ Heart-Link (디지털 롤링 페이퍼)
    AWS EC2 (Ubuntu): 리눅스 환경에서의 실제 배포 경험을 통해 서비스 운영 능력을 확보.
    Git & GitHub: 버전 관리 및 협업 워크플로우를 준수.
 
- 4. 시스템 아키텍처 (Architecture)
+ 4. 시스템 아키텍처
 
 1. 사용자가 브라우저(React)에서 글을 작성.
 2. React는 Axios를 통해 Spring Boot 서버로 데이터를 전송(REST API).
