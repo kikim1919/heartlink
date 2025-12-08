@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #ff6b6b;
+}
+
+.input-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ff4757;
+}
+
+.message-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.message-card {
+  position: relative; /* 버튼 위치를 잡기 위해 필요 */
+  background-color: #fff0f6; /* 연한 분홍색 포스트잇 느낌 */
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent; /* 배경 투명하게 */
+  color: #ff6b6b;
+  font-size: 12px;
+  padding: 5px;
+  width: auto;
+}
+
+.delete-btn:hover {
+  background-color: #ffe0e0;
+  color: #d63031;
+}
+
+.message-card:hover {
+  transform: scale(1.05); /* 마우스 올리면 살짝 커짐 */
+}
+
+.message-card h3 {
+  margin-top: 0;
+  color: #d63031;
+  font-size: 1.1rem;
+}
