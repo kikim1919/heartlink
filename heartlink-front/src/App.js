@@ -16,7 +16,7 @@ function App() {
 
   const fetchMessages = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/messages');
+      const response = await axios.get('http://98.93.42.147:8080/messages');
       setMessages(response.data);
     } catch (error) {
       console.error("쪽지 가져오기 실패", error);
@@ -32,7 +32,7 @@ function App() {
     }
 
     try {
-      await axios.post('http://localhost:8080/messages', {
+      await axios.post('http://98.93.42.147:8080/messages', {
         nickname: nickname,
         content: content,
         password: password
@@ -53,7 +53,7 @@ function App() {
     if (!passwordInput) return; 
 
     try {
-      const response = await axios.delete(`http://localhost:8080/messages/${id}`, {
+      const response = await axios.delete(`http://98.93.42.147:8080/messages/${id}`, {
         params: { password: passwordInput }
       });
 
