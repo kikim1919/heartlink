@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor // 빈 내용 허가
 public class Message {
 
-    @Id // "이건 주민등록번호 같은 고유 번호야."
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 순서 지정
     private Long id;
 
