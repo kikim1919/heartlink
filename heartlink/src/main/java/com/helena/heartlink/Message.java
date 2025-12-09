@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Message {
 
     @Id // "이건 주민등록번호 같은 고유 번호야."
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // "번호는 1, 2, 3... 자동으로 매겨줘."
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 순서 지정
     private Long id;
 
     private String nickname; // 작성자 닉네임
