@@ -19,7 +19,7 @@ function App() {
       const response = await axios.get('http://localhost:8080/messages');
       setMessages(response.data);
     } catch (error) {
-      console.error("쪽지 가져오기 실패 ㅠㅠ", error);
+      console.error("쪽지 가져오기 실패", error);
     }
   };
 
@@ -27,7 +27,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(!nickname || !content) {
-      alert("이름이랑 내용은 써야지!");
+      alert("이름이랑 내용을 써주세요!");
       return;
     }
 
@@ -42,13 +42,13 @@ function App() {
       setPassword('');
       fetchMessages(); 
     } catch (error) {
-      console.error("저장 실패 ㅠㅠ", error);
+      console.error("저장 실패", error);
     }
   };
 
-  // ★★★ 4. 삭제 기능 (여기가 중요해! App 함수 안에 있어야 해!) ★★★
+  // 삭제 기능 
   const handleDelete = async (id) => {
-    const passwordInput = prompt("삭제하려면 비밀번호를 입력해!");
+    const passwordInput = prompt("삭제하려면 비밀번호를 입력하세요!");
     
     if (!passwordInput) return; 
 
@@ -58,16 +58,15 @@ function App() {
       });
 
       if (response.data === "삭제 성공!") {
-        alert("깔끔하게 지웠어!");
+        alert("깔끔하게 지웠어요요!");
         fetchMessages(); 
       } else {
-        alert("비밀번호가 틀린 것 같은데? (또는 이미 지워짐)");
+        alert("비밀번호가 틀린 것 같은데요? (또는 이미 지워짐)");
       }
     } catch (error) {
       console.error("삭제 중 오류 발생", error);
     }
   };
-  // ★★★ 여기까지가 삭제 기능 끝! ★★★
 
   // 5. 화면 그리기
   return (
